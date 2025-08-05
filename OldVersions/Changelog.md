@@ -1,3 +1,9 @@
+# CapturaDadosLiDARv03.py
+## Conversão para .laz através do laszip64 e remoção dos arquivos intermediários
+ouster-sdk v0.15
+
+Incluida função que converge os arquivos .las para .laz, uma forma comprimida de nuvens de pontos que não necessita descompactação para utilização. Alem da remoção dos arquivos .pcap, .osf e .las em caso de conversão com sucesso.
+
 # CapturaDadosLiDARv02.py
 ## Atualização para a versão ouster-sdk v0.15:
 ouster-sdk v0.15
