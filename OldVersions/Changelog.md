@@ -1,3 +1,9 @@
+# CapturaDadosLiDARv04.py
+## Inclusão de controle de voxel-size
+ouster-sdk v0.15
+
+Incluida linha de código de voxel-size para conseguir controlar melhor qual a distancia dos pontos utilizados durante o SLAM, tornando as imagens .laz finais mais nítidas
+
 # CapturaDadosLiDARv03.py
 ## Conversão para .laz através do laszip64 e remoção dos arquivos intermediários
 ouster-sdk v0.15
