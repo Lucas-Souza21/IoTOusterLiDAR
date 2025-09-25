@@ -54,10 +54,7 @@ with closing(sensor.SensorPacketSource(hostname, lidar_port=lidar_port, imu_port
     try:
         subprocess.run([
         "ouster-cli", "source",
-        "-e", "identity",
         pcap_path,
-        "slam",
-        "--use-imu",  # <<< habilita correção de movimento usando IMU
         "--voxel-size", "0.01", #Remoção de pontos por proximidade
         "save", osf_path
         ], check=True)
