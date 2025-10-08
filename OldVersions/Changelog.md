@@ -1,3 +1,9 @@
+# CapturaDadosLiDARv05.py
+## Inclusão do PDAL
+ouster-sdk v0.15
+
+Inclusão da ferramenta PDAL para utilização de manipulações futuras.
+
 # CapturaDadosLiDARv04.py
 ## Inclusão de controle de voxel-size
 ouster-sdk v0.15
