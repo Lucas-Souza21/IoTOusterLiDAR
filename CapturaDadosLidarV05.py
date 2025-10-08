@@ -97,21 +97,38 @@ with closing(sensor.SensorPacketSource(hostname, lidar_port=lidar_port, imu_port
         print(f'⚠ PDAL falhou, mantendo LAS original: {e}')
         las_to_compress = las_path
 
-    # comprimir com laszip64
+    # -------- Compressão LAS → LAZ com laszip64 --------
+    # Ajuste para lidar com arquivo -000.las
+    if os.path.isfile(las_to_compress):
+        las_input = las_to_compress
+    else:
+        # tenta substituir .las por -000.las
+        base, ext = os.path.splitext(las_to_compress)
+        las_input_alt = f"{base}-000{ext}"
+        if os.path.isfile(las_input_alt):
+            las_input = las_input_alt
+        else:
+            print(f"❌ Arquivo LAS não encontrado nem com -000: {las_to_compress}")
+            exit(1)
+    
     laz_path = os.path.join(folder_path, f"{fname_base}.laz")
+
     if os.path.isfile(LASZIP_EXE) and os.access(LASZIP_EXE, os.X_OK):
-        print(f"▶ Compactando {las_to_compress} → {laz_path}")
+        print(f"▶ Compactando {las_input} → {laz_path}")
         try:
             subprocess.run(
-                f'"{LASZIP_EXE}" -i "{las_to_compress}" -o "{laz_path}"',
-                shell=True, check=True, capture_output=True, text=True
+                f'"{LASZIP_EXE}" -i "{las_input}" -o "{laz_path}"',
+                shell=True,
+                check=True,
+                capture_output=True,
+                text=True
             )
             print(f'✔ Conversão concluída: {laz_path}')
         except subprocess.CalledProcessError as e:
             print(f'❌ Erro na conversão LAZ:\n{e.stderr}')
+            exit(1)
     else:
-        print(f'⚠ laszip64 não encontrado ou sem permissão: {LASZIP_EXE}')
-        print(f'✔ Mantendo LAS sem compactação: {las_to_compress}')
+        print(f'❌ O executável laszip64 não foi encontrado ou não tem permissão de execução: {LASZIP_EXE}')
+        exit(1)
 
     print("✔ Fluxo finalizado.")
-
