@@ -22,9 +22,11 @@ O script foi criado para ser executado em um sistema operacional Linux Ubuntu, p
 
 É importante verificar a versão do Ubuntu utilizado, sendo necessário a versão 24.04.02 LTS codenome Noble para funcionamento.
 
-Antes de executar o script, certifique-se de que os seguintes pacotes e ferramentas estão instalados em um ambiente virtual (virtual enviroment `.venv`):
+Também foi utilizado o executável 'laszip64' na mesma pasta do código a ser testado.
 
-Também foi utilizado o executável 'laszip64' na mesma pasta do código a ser testado
+Após a versão V05 é necessário a presença de PDAL para o funcionamento do código.
+
+Antes de executar o script, certifique-se de que os seguintes pacotes e ferramentas estão instalados em um ambiente virtual (virtual enviroment `.venv`):
 
 ### Pacontes Python utilizados:
 ```bash
