@@ -1,3 +1,9 @@
+# CapturaDadosLiDARv06.py
+## Geração de CSVs
+ouster-sdk v0.15
+
+Inclusão da geração de arquivos csvs para melhorar a interação com PDAL.
+
 # CapturaDadosLiDARv05.py
 ## Inclusão do PDAL
 ouster-sdk v0.15
