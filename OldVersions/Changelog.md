@@ -1,3 +1,11 @@
+# CapturaDadosLiDARv07.py
+## Correção de movimentos angulares 29/10/2025
+ouster-sdk v0.15
+
+Inclusão de ferramentas de correção do movimento angular.
+Remoção temporária das ferramentas PDAL.
+Remoção do arquivo CSV e extensão intermediaria .osf.
+
 # CapturaDadosLiDARv06.py
 ## Geração de CSVs
 ouster-sdk v0.15
