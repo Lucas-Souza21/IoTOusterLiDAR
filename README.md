@@ -1,6 +1,6 @@
 # Captura e conversão de dados LiDAR utilizando um sensor Ouster OS1
 
-Este projeto realiza a **captura de dados LiDAR** utilizando um sensor **Ouster OS1**, e converte automaticamente os dados do formato padrão da Ouster `.pcap` para `.osf`, sendo um formato intermediário, e por fim para a extensão `.las`, utilizada em diversas aplicações relacionadas à compreensão ou manipulação de nuvem de pontos.
+Este projeto realiza a **captura de dados LiDAR** utilizando um sensor **Ouster OS1**, e converte automaticamente os dados do formato padrão da Ouster `.pcap` para `.las`, utilizada em diversas aplicações relacionadas à compreensão ou manipulação de nuvem de pontos.
 
 ---
 
@@ -10,8 +10,7 @@ Este projeto realiza a **captura de dados LiDAR** utilizando um sensor **Ouster 
 - Captura de dados por tempo definido (padrão: 5 segundos, sendo possível alterar no código)
 - Armazenamento dos dados em um diretório estruturado criado a partir da data e horario da captura
 - Conversão dos dados de:
-  - `.pcap` → `.osf` (formato intermediário Ouster)
-  - `.osf` → `.las` (formato padrão da indústria para nuvens de pontos)
+  - `.pcap` → `.las` (formato padrão da indústria para nuvens de pontos)
   - `.las` → `.laz` (formato padrão comprido de nuvens de pontos)
 
 ---
