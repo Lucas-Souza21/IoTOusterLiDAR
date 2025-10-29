@@ -1,6 +1,7 @@
 # CapturaDadosLiDARv07.py
 ## Correção de movimentos angulares 
 29/10/2025
+
 ouster-sdk v0.15
 
 Inclusão de ferramentas de correção do movimento angular.
